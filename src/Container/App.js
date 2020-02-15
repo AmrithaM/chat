@@ -7,6 +7,7 @@ import Messages from '../Component/Messages';
 import Scroll from '../Component/Scroll';
 import Signin from '../Component/Signin/Signin';
 import Register from '../Component/Register/Register';
+import Particles from 'react-particles-js';
 
 class App extends React.Component{
 
@@ -129,7 +130,23 @@ class App extends React.Component{
 
   		const {route, user, messages, likes} = this.state;
 
-	    return(<>
+	    return(<div>
+
+	    	<Particles className="particles"
+              params={{
+            		particles: {
+            			line_linked: {
+            				shadow: {
+            					enable: true,
+            					color: "#d5ddde",
+            					blur: 5
+            				}
+            			}
+            		}
+            	}}
+            
+            />
+
 	    	{route === 'home' 
 	    		? 
 
@@ -149,7 +166,7 @@ class App extends React.Component{
 		      		<Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
 		      	}</>
 		      		
-		    }</>
+		    }</div>
 	    );
   	}
 

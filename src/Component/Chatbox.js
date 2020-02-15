@@ -49,18 +49,16 @@ class Chatbox extends React.Component{
 	render(){
 
 		return(
-			<div>
+			<div id="chatbox" className="pa4" >
 				
-				<textarea onChange={this.onMessageChange} value={this.state.message}></textarea>
-
-				<currentUser.Consumer>
-			      {(user) => (
-			      	<button onClick={()=>this.onSendMessage(user.id)} type="submit">Send</button>
-			      )}
-			    </currentUser.Consumer>
-				
-				<hr/>
-
+				<textarea className="shadow-5 w-100" onChange={this.onMessageChange} value={this.state.message}></textarea>
+				<div className="v-mid tc ph3 ph4-l w-100 "> 
+					<currentUser.Consumer>
+				      {(user) => (
+				      	<button className="f5 ma4 pa3" onClick={()=>this.onSendMessage(user.id)} type="submit">Send</button>
+				      )}
+				    </currentUser.Consumer>
+				</div>
 			</div>
 		);
 

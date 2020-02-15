@@ -1,3 +1,13 @@
+#messageConatiner div{
+	background-color: #F5FF8A;
+}
+
 #messageContainer .senderMessage{
-	background-color: #ccffcc;
+	
+	background-color: #C2FF51;
+	/*background-image:
+	linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+	linear-gradient(#eee .1em, transparent .1em);
+	background-size: 100% 1.2em;*/
+	
 }

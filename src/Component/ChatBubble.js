@@ -61,15 +61,15 @@ class ChatBubble extends React.Component{
 
 		return(
 
-				<div className={message_user_id===user_id?"senderMessage":""}>
+				<div className={message_user_id===user_id?"senderMessage center shadow-5 w-80 pa4":"shadow-5 center w-80 pa4"}>
 
-					<h4>{name}</h4>
+					<h4 className="ttu">{name}:</h4>
 					<p>{message}</p>
 					<span>{this.getDateTime(new Date(timestamp))}</span>
-					<div>
-		
-						<span className={like?"":"hide"}>(Liked!)</span>
-						<button id={message_id} className={!like?"":"hide"} onClick={this.likeMessage}>Like</button>
+					<div style={{display: 'flex', justifyContent: 'flex-end'}}>
+	
+						<span role="img" aria-label="like" className={like?"tc f1":"hide f1 tc"}> 👍 </span>
+						<button id={message_id} className={!like?"pa3":" pa3 hide"} onClick={this.likeMessage}>Like</button>
 						
 					</div>
 				</div>
