@@ -138,7 +138,7 @@ class App extends React.Component{
             			line_linked: {
             				shadow: {
             					enable: true,
-            					color: "#d5ddde",
+            					color: "#690fad",
             					blur: 5
             				}
             			}
