@@ -61,7 +61,7 @@ class ChatBubble extends React.Component{
 
 		return(
 
-				<div className={message_user_id===user_id?"senderMessage center shadow-5 w-80 pa4":"shadow-5 center w-80 pa4"}>
+				<div className={message_user_id===user_id?"senderMessage center shadow-5 w-80 pa1 pl3":"shadow-5 center w-80 pa1 pl3"}>
 
 					<h4 className="ttu">{name}:</h4>
 					<p>{message}</p>
