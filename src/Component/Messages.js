@@ -17,11 +17,10 @@ class Messages extends React.Component{
 			const messageArray = messages.map((message, index) => {
 
 				return (
-					<currentUser.Consumer>
+					<currentUser.Consumer key={message.id} >
       					
       					{(user) => (
       						<ChatBubble 
-								key={message.id} 
 								message_id={message.id}
 								message_user_id={message.user_id}
 								user_id={user.id}
